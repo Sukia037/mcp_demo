@@ -8,7 +8,9 @@ from dataclasses import dataclass
 from knowledge import DOCUMENTS
 
 
-TOKEN_PATTERN = re.compile(r"[a-zA-Z]+(?:'[a-zA-Z]+)?|\d+(?:\.\d+)?")
+TOKEN_PATTERN = re.compile(
+    r"[a-zA-Z]+(?:'[a-zA-Z]+)?|\d+(?:\.\d+)?|[\u3400-\u4dbf\u4e00-\u9fff]+"
+)
 STOP_WORDS = {
     "a",
     "an",
@@ -49,11 +51,14 @@ STOP_WORDS = {
 
 
 def tokenize(text: str) -> list[str]:
-    return [
-        token
-        for token in TOKEN_PATTERN.findall(text.lower())
-        if token not in STOP_WORDS and len(token) > 1
-    ]
+    tokens: list[str] = []
+    for token in TOKEN_PATTERN.findall(text.lower()):
+        if re.fullmatch(r"[\u3400-\u4dbf\u4e00-\u9fff]+", token):
+            tokens.append(token)
+            tokens.extend(token[index : index + 2] for index in range(len(token) - 1))
+        elif token not in STOP_WORDS and len(token) > 1:
+            tokens.append(token)
+    return tokens
 
 
 @dataclass(frozen=True)
@@ -132,4 +137,3 @@ def search_documents(question: str, limit: int = 3) -> dict[str, object]:
         "matches": matches,
         "message": None if matches else "No sufficiently relevant content was found.",
     }
-

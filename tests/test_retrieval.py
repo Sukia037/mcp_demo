@@ -17,22 +17,22 @@ class RetrievalTests(unittest.TestCase):
         self.assertTrue(result["matches"], result["message"])
         self.assertEqual(result["matches"][0]["source"], expected_source)
 
-    def test_straight_line_motion_question_finds_chapter_2(self) -> None:
+    def test_graduation_credit_question_finds_required_courses(self) -> None:
         self.assert_top_source(
-            "How are position, velocity, and acceleration related in straight-line motion?",
-            "02_lecture_outline.txt",
+            "資訊工程學系畢業需要多少學分？",
+            "元智大學資訊工程學系必修科目表.txt",
         )
 
-    def test_projectile_motion_question_finds_chapter_3(self) -> None:
+    def test_elective_course_question_finds_elective_courses(self) -> None:
         self.assert_top_source(
-            "How do vector components describe projectile motion?",
-            "03_lecture_outline.txt",
+            "哪些選修課程可能不會正常開課？",
+            "元智大學資訊工程學系選修科目表.txt",
         )
 
-    def test_newtons_laws_question_finds_chapter_4(self) -> None:
+    def test_internship_question_finds_internship_rules(self) -> None:
         self.assert_top_source(
-            "What does Newton's first law say about uniform motion and net force?",
-            "04_lecture_outline.txt",
+            "申請專業實習需要符合哪些條件？",
+            "元智大學資訊工程學系專業實習實施辦法.txt",
         )
 
     def test_unrelated_question_has_no_matches(self) -> None:

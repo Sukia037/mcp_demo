@@ -13,13 +13,13 @@ from knowledge import DOCUMENTS, load_documents  # noqa: E402
 
 
 class KnowledgeLoadingTests(unittest.TestCase):
-    def test_demo_lecture_documents_are_loaded(self) -> None:
-        self.assertEqual(len(DOCUMENTS), 6)
-        self.assertEqual(
-            {document.name for document in DOCUMENTS},
-            {f"0{chapter}_lecture_outline.txt" for chapter in range(2, 8)},
-        )
-        self.assertGreater(sum(len(document.chunks) for document in DOCUMENTS), 6)
+    def test_yzu_documents_are_loaded(self) -> None:
+        self.assertEqual(len(DOCUMENTS), 5)
+        names = {document.name for document in DOCUMENTS}
+        self.assertIn("元智大學資訊工程學系必修科目表.txt", names)
+        self.assertIn("元智大學資訊工程學系選修科目表.txt", names)
+        self.assertIn("元智大學資訊工程學系專業實習實施辦法.txt", names)
+        self.assertGreater(sum(len(document.chunks) for document in DOCUMENTS), 5)
 
     def test_supported_text_is_loaded_and_other_extensions_are_ignored(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
@@ -42,4 +42,3 @@ class KnowledgeLoadingTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

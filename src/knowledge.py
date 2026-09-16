@@ -1,12 +1,15 @@
-"""Load prepared local text documents and split them into small chunks."""
+"""Load one local knowledge base and split its text files into chunks."""
 
+import os
 import re
 from dataclasses import dataclass
 from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-DATA_DIR = PROJECT_ROOT / "data"
+DEFAULT_KNOWLEDGE_BASE = "yzu"
+KNOWLEDGE_BASE = os.getenv("KNOWLEDGE_BASE", DEFAULT_KNOWLEDGE_BASE).strip()
+DATA_DIR = PROJECT_ROOT / "data" / (KNOWLEDGE_BASE or DEFAULT_KNOWLEDGE_BASE)
 SUPPORTED_SUFFIXES = {".md", ".txt"}
 MAX_CHUNK_CHARACTERS = 1_600
 
@@ -88,4 +91,3 @@ def get_knowledge_status() -> dict[str, object]:
             for document in DOCUMENTS
         ],
     }
-

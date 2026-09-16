@@ -90,7 +90,7 @@ feat: complete working MCP RAG MVP
 
 ---
 
-### [ ] Milestone 5 — 加上基本 Demo 錯誤處理
+### [x] Milestone 5 — 加上基本 Demo 錯誤處理
 
 1. **要完成什麼**：只處理最常見的 Demo 錯誤：空問題、沒有找到相關內容、Server / LLM 錯誤，以及 Ctrl+C 正常離開。
 2. **為什麼需要它**：避免常見錯誤讓現場只剩難讀的錯誤堆疊或程式明顯卡死，不在今晚追求完整錯誤系統。
@@ -115,7 +115,7 @@ feat: complete working MCP RAG MVP
 
 **完成條件：**核心 Demo 發生常見錯誤時，不會只出現整頁 stack trace，也不會讓程式明顯卡死即可。
 
-### [ ] Milestone 6 — 做成可重複的 Demo 流程
+### [x] Milestone 6 — 做成可重複的 Demo 流程
 
 1. **要完成什麼**：補上最短安裝/執行說明、依賴清單、3～5 個標準問題與預期結果，以及一個 smoke test（冒煙測試）；從乾淨終端完整彩排。
 2. **為什麼需要它**：固定步驟和驗收問題能降低現場輸錯指令或依賴環境殘留的風險。
@@ -123,7 +123,7 @@ feat: complete working MCP RAG MVP
 4. **怎麼確認成功**：關閉所有舊程序、開新終端、完全照 README 操作；連續跑兩輪標準問題，來源都符合預期。
 5. **大概技術**：Python virtual environment（Python 虛擬環境）、`requirements.txt`（依賴清單）、README、簡單 smoke-test command（冒煙測試命令）。
 
-### [ ] Milestone 7 — 用 LLM 完成真正的 RAG Generation（必做）
+### [x] Milestone 7 — 用 LLM 完成真正的 RAG Generation（必做）
 
 1. **要完成什麼**：只把 Retrieval（檢索）找出的片段交給 LLM（大型語言模型），讓它主要根據這些內容回答並保留來源，完成真正的 RAG Generation（檢索增強生成）。
 2. **為什麼需要它**：這是今晚 MVP 的必要功能，讓系統不只回傳片段，而是用檢索到的上下文產生有根據的答案。
@@ -153,7 +153,7 @@ Answer + Sources
 
 LLM 必須主要根據 Retrieval 找出的內容回答。如果 Retrieval 找不到足夠資料，LLM 不應自行編造答案。如果 API key、網路或 LLM API 暫時失敗，可以保留 template answer（模板答案）作為 fallback，但 fallback 不能取代正常的 LLM RAG 流程。
 
-### [ ] Milestone 8 — 終端顯示美化（可刪除）
+### [x] Milestone 8 — 終端顯示美化（可刪除）
 
 1. **要完成什麼**：只在核心穩定後，加上簡短標題、答案/來源分區或少量顏色。
 2. **為什麼需要它**：提高可讀性，但不增加核心能力。
