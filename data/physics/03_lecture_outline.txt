@@ -1,0 +1,290 @@
+# 03_lecture_outline
+
+Source: 03_lecture_outline.pptx
+
+## Slide 1
+
+Essential University Physics
+Fourth Edition, Global Edition
+Chapter 3
+Motion in Two and Three Dimensions
+Copyright © 2021 Pearson Education, Ltd. All Rights Reserved
+
+## Slide 2
+
+Learning
+Outcomes
+3.1
+Describe position in two and three dimensions, using vectors.
+3.2
+Represent velocity and acceleration as vectors.
+3.3
+Relate velocities in different reference frames.
+3.4
+Analyze motion in two dimensions.
+3.5
+Predict the motion of projectiles subject to gravity.
+3.6
+Describe circular motion as accelerated motion.
+
+## Slide 3
+
+Vectors
+A
+vector
+is a quantity that has both magnitude and direction:
+In two dimensions, it takes two numbers to specify a vector.
+In three dimensions, it takes three numbers.
+A vector can be represented by an arrow whose length corresponds to the vector’s magnitude.
+In contrast, a
+scalar
+is a quantity, such as temperature, to which we do not assign a direction.
+
+## Slide 4
+
+Vectors: Position and Displacement
+Position is a vector quantity:
+An object’s position is specified by giving its distance from an origin and its direction relative to each axis.
+Here
+describes a point 2.0 m
+from the origin at a 30° angle to the axis.
+A displacement vector,
+represents a change in position:
+It points from the tip of the initial position vector to the tip of the final position vector.
+
+## Slide 5
+
+Vectors: Addition
+(1 of 2)
+To add vectors graphically, place the tail of the second vector at the head of the first vector:
+Their sum is then the vector from the tail of the first vector to the head of the second vector.
+Here
+is the sum of
+
+## Slide 6
+
+Vectors: Addition
+(2 of 2)
+Vector addition is commutative and associative.
+
+## Slide 7
+
+Multiplication and Subtraction
+To multiply a vector by a scalar, multiply the vector
+’
+s magnitude by the scalar:
+For a positive scalar, the direction is unchanged.
+For a negative scalar, the direction reverses.
+To subtract vectors, add the negative of the second vector to the first:
+In the figure, we see that
+Thus, we conclude that
+
+## Slide 8
+
+Vector Components
+It is convenient to express vectors using
+components
+.
+In the Cartesian plane, we specify the components as
+A
+x
+and
+A
+y
+—the projections of the vector onto the directions of the
+x
+-axis and
+y
+-axis, respectively.
+Alternatively, we specify the magnitude of the vector,
+A
+, and its standard angle,
+θ
+.
+
+## Slide 9
+
+Unit Vectors
+Unit vectors have a magnitude of 1 and no units:
+They
+’
+re used to specify direction in compact mathematical representations of vectors.
+Unit vectors in the
+x
+,
+y
+, and
+z
+directions are designated
+Any vector in two dimensions can be
+written as a linear combination of
+Any vector in three dimensions can be written as a linear combination of
+
+## Slide 10
+
+Vector Arithmetic with Unit Vectors
+To add vectors, add the individual components:
+To multiply by a scalar, distribute the scalar, that is, multiply the individual components by the scalar:
+
+## Slide 11
+
+Velocity and Acceleration Vectors
+Velocity is the rate of change of position:
+The average velocity over a time interval
+is the change
+in the position vector divided by the time.
+Here dividing by
+means multiplying by the scalar
+Instantaneous velocity is the time derivative of position:
+Acceleration is the rate of change of velocity:
+
+## Slide 12
+
+Velocity and Acceleration in Two Dimensions
+(1 of 2)
+An acceleration
+acting for time
+produces a velocity
+change:
+The change adds
+vectorially
+to give the new velocity:
+The new velocity depends on the magnitude of the acceleration as well as its direction:
+
+## Slide 13
+
+Velocity and Acceleration in Two Dimensions
+(2 of 2)
+only speed changes
+only direction changes
+In general: both speed and direction change
+
+## Slide 14
+
+Relative Motion
+(1 of 2)
+Velocity is always relative to some coordinate system, which establishes a
+frame of reference
+:
+For instance, a person walking at 4 km/h toward the rear of the airplane is moving at 996 km/h relative to the earth when the airplane is flying at 1000 km/h relative to the earth.
+What are the two frames of reference here?
+We will often need to relate measurements made in different frames of reference:
+If an object moves with a velocity
+relative to one frame of
+reference
+and that frame moves at
+relative to a second
+reference frame, then the velocity of the object relative to the second frame is given by:
+
+## Slide 15
+
+Relative Motion
+(2 of 2)
+Example:
+A jetliner flies at 960 k
+m/h relative to the air in a wind blowing eastward at 190 k
+m/h. In what direction should the plane point to track northward?
+The vector diagram identifies the quantities in the equation and shows that the angle is 11° west of north:
+
+## Slide 16
+
+Constant Acceleration
+With constant acceleration, the equations for one-dimensional motion apply independently in each direction.
+The equations take a compact form in vector notation.
+Each equation stands for two or three separate equations:
+For example, in two dimensions, the x- and y-components
+of the position vector
+can be written as:
+
+## Slide 17
+
+Projectile Motion
+Motion that is predominately influenced by gravity is known as projectile motion.
+Neglecting air resistance, the acceleration of a projectile near Earth
+’
+s
+surface is directed downward and has a magnitude of
+Equations for projectile motion, in a coordinate system with
+y
+axis vertically upward are as follows:
+Horizontal and vertical motions are independent.
+
+## Slide 18
+
+Projectile Motion: Example
+A ball moving horizontally at 4.0 m/s rolls off a table and falls 0.70 m to the floor. How far does the ball land from the base of the table?
+We use the basic projectile equations:
+Set
+v
+x
+0
+= 4.0 m/s;
+v
+y
+0
+= 0;
+x
+0
+= 0;
+y
+0
+= 0.70 m;
+y
+= 0.
+Starting with the second equation, we obtain:
+
+## Slide 19
+
+Projectile Trajectories
+The trajectory of an object in projectile motion is a parabola, unless the object has no horizontal component of motion.
+Horizontal motion is unchanged, while vertical motion undergoes downward acceleration:
+Equation for the
+trajectory:
+
+## Slide 20
+
+Uniform Circular Motion
+When an object moves in a circular path of radius
+r
+at constant speed
+v
+, its acceleration has magnitude:
+The acceleration vector points toward the center of the circle.
+Since the direction of the acceleration keeps changing, this is
+not
+constant acceleration:
+Constant acceleration in two dimensions implies a
+parabolic
+trajectory.
+
+## Slide 21
+
+Nonuniform Circular Motion
+When an object moves on a circular path with changing speed, its acceleration has
+both radial and tangential
+components
+:
+is
+perpendicular
+to
+is parallel to
+The figure shows
+a car braking as
+it rounds a curve:
+
+## Slide 22
+
+Summary
+In two and three dimensions, position, velocity, and acceleration become vector quantities.
+Velocity is the rate of change of position:
+Acceleration is the rate of change of velocity:
+In general, acceleration changes both the magnitude and direction of the velocity.
+Projectile motion results from the constant acceleration of gravity.
+In uniform circular motion, the acceleration has magnitude
+and points toward the center of the circular path.
+
+## Slide 23
+
+Copyright
+This work is protected by United States copyright laws and is
+provided solely for the use of instructors in teaching their courses and assessing student learning. Dissemination or sale of any part of this work (including on the World Wide Web) will destroy the integrity of the work and is not permitted. The work and materials from it should never be made available to students except by instructors using the accompanying text in their classes. All recipients of this work are expected to abide by these restrictions and to honor the intended pedagogical purposes and the needs of other instructors who rely on these materials.

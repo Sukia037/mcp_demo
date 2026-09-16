@@ -1,0 +1,230 @@
+# 07_lecture_outline
+
+Source: 07_lecture_outline.pptx
+
+## Slide 1
+
+Essential University Physics
+Fourth Edition, Global Edition
+Chapter 7
+Conservation of Energy
+Copyright © 2021 Pearson Education, Ltd. All Rights Reserved
+
+## Slide 2
+
+Learning Outcomes
+7.1
+Distinguish conservative from nonconservative forces.
+7.2
+Calculate potential energy, especially with gravity and
+springs
+.
+7.3
+Use conservation of mechanical energy to solve problems
+that
+would be difficult using Newton’s second law.
+7.4
+Evaluate situations where nonconservative forces result in loss
+of mechanical energy
+.
+7.5
+Distinguish internal energy from mechanical energy.
+7.6
+Work with potential-energy curves for a wide variety of systems.
+
+## Slide 3
+
+Conservative and Nonconservative Forces
+(1 of 3)
+A
+conservative force
+stores any work done against it and can
+“give back” the stored energy by doing work itself:
+The rock climber shown below does work against gravity as she climbs but can recover that work in the form of kinetic energy as she descends.
+Nonconservative
+forces convert (macroscopic) mechanical energy into (microscopic) internal energy:
+The mover does work against friction that turns into heat and cannot be recovered as kinetic energy by returning the chest to its original position.
+
+## Slide 4
+
+Conservative and Nonconservative Forces
+(2 of 3)
+For a conservative force, the work done in moving between two points is independent of the path taken:
+Because the work done by a conservative force is path independent, the work done in going around any
+closed path
+is zero:
+For a nonconservative force, the path taken between two points must be specified in order to determine the work done by the force.
+
+## Slide 5
+
+Conservative and Nonconservative Forces
+(3 of 3)
+Examples of conservative forces include the following:
+Gravit
+y
+The static electric force
+The force of an ideal spring
+Nonconservative forces include the following:
+Friction
+The electric force in the presence of time-varying magnetic effects
+
+## Slide 6
+
+Potential Energy
+The
+“stored work” associated with a conservative force is called
+potential energy
+:
+Potential energy is stored energy that can be released as kinetic energy.
+The change in potential energy is defined as the negative of the work done by a conservative force acting over any path between two points:
+Potential energy change is independent of path taken.
+Only
+changes
+in potential energy matter.
+We
+a
+re free to set the zero of potential energy at any convenient point.
+
+## Slide 7
+
+Gravitational Potential Energy
+Gravitational potential energy
+stores the work done against gravity:
+Near the Earth’s surface, gravity is vertical and nearly constant, so gravitational potential energy only depends on the vertical displacement:
+Gravitational potential energy increases linearly with height
+y
+.
+
+## Slide 8
+
+Elastic Potential Energy
+Elastic potential energy
+stores the work done in stretching or compressing springs or spring-like systems:
+For an ideal spring, elastic potential energy increases
+quadratically
+with stretch or compression
+x
+:
+This reflects the
+linearly increasing
+spring force.
+
+## Slide 9
+
+Conservation of Mechanical Energy
+By the work–kinetic energy theorem, the change in an object
+’
+s kinetic energy equals the net work done on the object:
+When only conservative forces act, the net work is the negative of the
+potential-energy change:
+Therefore, when only conservative forces act, any change in potential energy is compensated by an opposite change in kinetic energy:
+Equivalently,
+Both these equations are statements of the law of
+conservation of mechanical energy
+.
+
+## Slide 10
+
+Problem Solving with Conservation of Energy
+Interpret
+the problem to make sure all forces are conservative, so conservation of mechanical energy applies.
+Identify the quantity you
+’
+re being asked to find, which may be an energy or some related quantity
+.
+Develop
+your solution plan by drawing the object in a situation where you can determine both its kinetic and potential energy, then again in the situation where one quantity is unknown. Also draw bar charts showing relative sizes of the various energies:
+Set up the equation
+Evaluate
+to solve for the unknown quantity, which might be an energy, a spring stretch, a velocity, etc.
+Assess
+your solution to see that your answer makes sense, has the right physical units, and is consistent with your bar charts.
+
+## Slide 11
+
+Example: A Dart Gun
+A spring-loaded dart gun is used to propel a dart:
+Given the mass of the dart,
+m
+, the initial compression of the spring,
+x
+0
+, and the spring constant,
+k
+, write an expression for the speed of the dart.
+,
+Solving for velocity, we obtain:
+
+## Slide 12
+
+Example: A Spring and Gravity
+A spring, with constant
+k
+is initially compressed a distance
+x
+0
+and used to propel a block up a ramp:
+Neglecting friction, how high does the block rise up the slope?
+Looking only at the initial and final states, energy has changed from elastic to gravitational potential energy.
+So
+
+## Slide 13
+
+Potential-Energy Curves
+Potential-energy curves depict a system
+’
+s potential energy as a function of position or other quantities representing the system
+’
+s configuration.
+An object with a given total energy can be
+“trapped” in a “potential well” established by points where its total energy equals its potential energy.
+These points are
+turning points
+, beyond which the object cannot move given its fixed total energy.
+Potential-energy curves for a roller-coaster car with three different total energies:
+
+## Slide 14
+
+Potential-Energy Curve for a Molecule
+Potential-energy curves help determine the structure of systems, from molecules to engineered systems to stars.
+The potential-energy curve for a pair of hydrogen atoms shows potential energy as a function of atomic separation:
+The minimum in the graph shows the equilibrium separation of the H
+2
+molecule.
+It
+’
+s convenient to take the zero of potential energy at infinite separation.
+Negative total energies represent bound states of the hydrogen molecule.
+
+## Slide 15
+
+Force and Potential Energy
+Force is greatest where the graph is steep—that is, where the potential energy is changing rapidly.
+Mathematically, the component of force in a given direction is the negative derivative of the potential energy with respect to position in that direction:
+
+## Slide 16
+
+Got It?
+The figure shows the potential energy associated with an electron in a microelectronic device. At which of the labeled points does the force on the electron has the greatest magnitude?
+
+## Slide 17
+
+Summary
+Potential energy
+is stored energy that can be converted to kinetic energy.
+The change in potential energy is the negative of the work done by a conservative force as an object is moved on any path between two points:
+When only conservative forces act, the total mechanical energy
+K
++
+U
+is conserved:
+Potential-energy curves
+describe potential energy as a function of position or configuration.
+Force
+is the negative derivative of potential energy:
+
+## Slide 18
+
+Copyright
+This work is protected by United States copyright laws and is
+provided solely for the use of instructors in teaching their courses and assessing student learning. Dissemination or sale of any part of this work (including on the World Wide Web) will destroy the integrity of the work and is not permitted. The work and materials from it should never be made available to students except by instructors using the accompanying text in their classes. All recipients of this work are expected to abide by these restrictions and to honor the intended pedagogical purposes and the needs of other instructors who rely on these materials.

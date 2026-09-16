@@ -1,0 +1,295 @@
+# 04_lecture_outline
+
+Source: 04_lecture_outline.pptx
+
+## Slide 1
+
+Essential University Physics
+Fourth Edition,
+Global Edition
+Chapter 4
+Force and Motion
+Copyright © 2021 Pearson Education, Ltd. All Rights Reserved
+
+## Slide 2
+
+Learning Outcomes
+4.1
+Articulate the Newtonian paradigm that it’s about
+change
+in motion.
+4.2
+List Newton’s three laws of motion.
+4.3
+Solve problems using Newton’s second law.
+4.4
+Name the fundamental forces.
+4.5
+Describe quantitatively how gravity acts on objects.
+4.6
+Distinguish apparent weight from actual weight.
+4.7
+Identify Newton’s third-law force pairs and find their values.
+4.8
+Determine the force exerted by springs.
+
+## Slide 3
+
+The Wrong Question
+What causes motion? That
+’
+s the wrong question!
+Aristotle believed that it took a force—a push or pull—to keep something moving. This view prevailed for some 2000 years.
+The right question: Why does motion
+change
+?
+Galileo and Newton discovered the correct relation between force and motion: Force is only needed to cause the motion of an object to change!
+The Aristotelian view: In the absence of a force, an object will stop moving.
+The Newtonian view: In the absence of a force, the motion of an object does not change.
+
+## Slide 4
+
+Newton’s First Law of Motion
+Newton
+’
+s first law of motion:
+A body in uniform motion remains in uniform motion, and a body at rest remains at rest, unless acted on by a nonzero net force.
+Uniform motion is motion at a constant speed in a straight line.
+The first law maintains that uniform motion is a natural state, requiring no explanation.
+Net force is the vector sum of all forces that act on a given object.
+
+## Slide 5
+
+Newton
+’
+s First Law of Motion: Got It?
+A curved barrier lies on a horizontal tabletop, as shown. A ball rolls along the barrier and the barrier exerts a force that guides the ball in its curved path. After the ball leaves the barrier, which path does it follow?
+
+## Slide 6
+
+Newton’s Second Law
+Newton’s second law
+tells quantitatively how force changes an object
+’
+s “quantity of motion:”
+Newton defined
+“quantity of motion,” now called
+momentum
+, as the product of an object
+’
+s mass and velocity:
+Newton
+’
+s second law equates the rate of change of momentum to the net force on an object:
+When mass is constant, Newton
+’
+s second law becomes:
+The force required to accelerate a 1-k
+g mass at the rate of
+is defined to be
+1
+newton
+(N)
+.
+
+## Slide 7
+
+Mass, Inertia, and Force
+If we solve the second law for the acceleration, we find that
+showing that a given force is less effective in changing the motion of a more
+massive object
+:
+The mass
+m
+that appears in Newton
+’
+s laws is thus a measure of
+an object
+’
+s
+inertia
+and determines the object
+’
+s response to a given force.
+From Newton
+’
+s second law for a force of magnitude
+F
+,
+we get
+
+## Slide 8
+
+The Fundamental Forces
+Physicists now recognize three fundamental forces:
+Gravity
+The strong force
+The electroweak force
+All common forces fall under these three categories:
+Nearly all everyday forces, except gravity,
+are electromagnetic forces—one aspect of the electroweak force.
+Historically, more forces were once
+regarded as fundamental but were
+later understood to be related.
+A goal of physics is to unify all
+forces in a
+“Theory of Everything.”
+
+## Slide 9
+
+The Force of Gravity: Mass and Weight
+Weight
+is the force of gravity on an object. Since all objects in free fall, fall with a downward acceleration
+we can infer the weight of a mass
+m
+using Newton’s second law:
+Mass does n
+o
+t depend on the presence or strength
+of gravity:
+Weight depends on gravity so varies with location:
+Weight is different on different planets.
+Near Earth
+’
+s surface,
+has magnitude of
+or 9.8 N/k
+g and is directed downward.
+
+## Slide 10
+
+Weightlessness
+All objects experience the same gravitational acceleration, regardless of mass.
+Therefore, objects in
+free fall
+—under the influence of gravity alone—appear “
+weightless” because they share a common accelerated motion.
+This effect is noticeable in orbiting spacecraft:
+because the absence of air resistance means gravity is the only force acting.
+because the
+apparent weightlessness
+continues indefinitely since the orbit never intersects Earth.
+
+## Slide 11
+
+Using Newton’s Second Law: The Free-Body Diagram
+The free-body diagram is an important tool for solving problems involving the second law:
+Identify the object of interest and the forces acting on it.
+Represent the object as a dot.
+Draw the vectors for only those forces acting on the object, with their tails starting on the dot.
+
+## Slide 12
+
+Solving Problems with Newton
+’
+s Second Law
+
+## Slide 13
+
+Example
+A 740-k
+g elevator accelerates upward at
+pulled by a cable of negligible mass. Find the tension force in the cable:
+INTERPRET:
+The object of interest is the elevator; the forces are gravity and the cable tension.
+DEVELOP:
+Newton
+’
+s law reads:
+EVALUATE:
+In a coordinate system with
+y
+-axis upward, Newton
+’
+s law
+reads:
+Solving gives
+ASSESS:
+Does it make sense? Look at some special cases.
+When
+a
+= 0,
+T
+=
+m
+g
+and the cable tension balances gravity.
+When
+T
+= 0,
+a
+= −
+g
+and the elevator falls freely.
+
+## Slide 14
+
+Newton
+’
+s Third Law
+The third law tells us forces come in pairs:
+If object A exerts a force on object B, then object B exerts an oppositely directed force of equal magnitude on A.
+Obsolete language:
+“For every action there is an equal but opposite reaction.”
+Important point: The two forces always act on
+different
+objects; therefore, they can
+’
+t cancel each other.
+Example:
+Hand pushes on a book with a force
+Third law states that the book must push on hand with a force
+
+## Slide 15
+
+Measuring Force: Spring Forces
+(1 of 2)
+A stretched or compressed spring usually produces a force proportional to the stretch or compression from its equilibrium configuration. In equation form, we have:
+This equation is known as
+Hooke’s law
+.
+The spring force is a
+restoring force
+because its direction is opposite to that of the stretch or compression.
+
+## Slide 16
+
+Measuring Force: Spring Forces
+(2 of 2)
+We can attach a calibrated scale to an
+ideal spring
+(one that obeys Hooke’s law) to measure force.
+In particular, a spring scale can be used to measure the weight of an object that hangs from the scale in equilibrium:
+Caution: When a scale is used to accelerate an attached mass, it can read more or less than the correct weight of the hanging mass!
+
+## Slide 17
+
+Summary
+In Newtonian physics, force—a push or pull—causes
+change
+in motion, not motion itself.
+Newton
+’
+s three laws are as follows:
+First law:
+A body in motion remains in uniform motion, and a body at rest remains at rest, unless acted on by a nonzero net force. This law is implicit in Newton
+’
+s second law.
+Second law:
+The rate at which a body
+’
+s momentum changes is equal to the net force acting on the body:
+Third law:
+If object A exerts a force on object B, then object B exerts an oppositely directed force of equal magnitude on A.
+An object
+’
+s
+weight
+is the force that gravity exerts on it:
+Springs are convenient force-measuring devices. For an ideal spring, Hooke’s lab applies:
+
+## Slide 18
+
+Copyright
+This work is protected by United States copyright laws and is
+provided solely for the use of instructors in teaching their courses and assessing student learning. Dissemination or sale of any part of this work (including on the World Wide Web) will destroy the integrity of the work and is not permitted. The work and materials from it should never be made available to students except by instructors using the accompanying text in their classes. All recipients of this work are expected to abide by these restrictions and to honor the intended pedagogical purposes and the needs of other instructors who rely on these materials.

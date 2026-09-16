@@ -1,0 +1,312 @@
+# 05_lecture_outline
+
+Source: 05_lecture_outline.pptx
+
+## Slide 1
+
+Essential University Physics
+Fourth Edition, Global Edition
+Chapter 5
+Using Newton
+’
+s Laws
+Copyright © 2021 Pearson Education, Ltd. All Rights Reserved
+
+## Slide 2
+
+Learning Outcomes
+5.1
+Use a strategic approach to solve problems involving Newton’s second law in two dimensions.
+5.2
+Solve problems involving two connected objects.
+5.3
+Solve problems involving circular motion with one or more forces.
+5.4
+Describe the difference between static and kinetic friction.
+5.5
+Incorporate frictional force into problems involving other forces.
+5.6
+Describe drag forces.
+
+## Slide 3
+
+Newton’s Law in Two Dimensions: Skiing
+(1 of 2)
+A 65-k
+g skier glides down a slippery slope (negligible friction) at an angle of 32°:
+Find the skier’s acceleration.
+Find the force the snow exerts on the skier.
+To solve this problem, we draw a free-body diagram that corresponds to the physical diagram.
+Physical diagram
+Free-body diagram
+
+## Slide 4
+
+Newton’s Law in Two Dimensions: Skiing
+(2 of 2)
+We now apply Newton
+’
+s second law using the
+free-body diagram
+as a guide:
+The analysis is simpler if we write this equation in component form using a tilted coordinate system—this makes the
+y-
+component of the unknown acceleration zero.
+In components:
+x
+-component:
+y-
+component:
+Solve
+(with
+m
+= 65 kg and
+θ
+= 32
+°
+)
+to get the answers:
+
+## Slide 5
+
+Multiple Objects
+(1 of 2)
+Solve problems involving multiple objects by first identifying each object and all the forces and constraints on it.
+Draw a free-body diagram for each object.
+Write Newton
+’
+s law for each object.
+Identify connections among the objects, which give common terms in the
+equations.
+Solve.
+Example:
+A 73-k
+g climber dangles over the edge of a frictionless ice cliff from a massless rope tied to a 940-k
+g rock:
+What is the acceleration of the climber?
+
+## Slide 6
+
+Multiple Objects
+(2 of 2)
+Draw a free-body diagram for the climber and the rock.
+Write Newton’s second law for the both objects:
+Now write these equations in component form:
+The accelerations of the climber and rock are equal in magnitude—call that common value
+a
+.
+In the absence of friction, the magnitude of the tension in the massless rope is constant—call that
+T
+:
+climber,
+y
+:
+T
+−
+m
+c
+g
+= −
+m
+c
+a
+rock,
+x
+:
+T
+=
+m
+r
+a
+rock,
+y
+:
+n
+−
+m
+r
+g
+= 0
+Solving the first two equations, we obtain:
+
+## Slide 7
+
+Circular Motion
+(1 of 2)
+Problems involving circular motion use the same methods as other Newton’s law problems
+.
+For uniform circular motion, the
+acceleration
+points toward the center of the circle and has the following magnitude:
+Thus, t
+he magnitude of the
+force
+on an object of mass
+m
+in circular motion
+with radius
+r
+is as follows:
+This is sometimes called a
+centripetal force
+.
+
+## Slide 8
+
+Circular Motion
+(2 of 2)
+A ball of mass
+m
+whirls around in a horizontal circle at the end of a string of length
+L
+. The string makes an angle
+θ
+with the horizontal. Find the speed of the ball:
+Draw a
+free-body diagram.
+Apply Newton’s second law:
+Note that
+Write equations using components:
+Solve for the ball’s speed by eliminating
+T
+:
+
+## Slide 9
+
+Looping the Loop
+A roller-coaster car is traveling around a circular loop of radius
+r
+. What
+minimum speed
+does the car need at the top of the loop so that stays on the track?
+The car experiences the force of gravity and a normal force from the track.
+Gravity is always downward and the normal force is always perpendicular to the track. We assume that the normal force pushes the car away from the track and cannot pull the car toward the track.
+
+## Slide 10
+
+Looping the Loop Solution
+At the top of the loop,
+both forces are downward. Newton’s second law gives:
+In component form (choosing the positive direction downward), we have:
+Solving for
+v,
+we obtain:
+As the car slows and begins to leave the track, the normal force approaches zero. Therefore, the minimum speed is:
+
+## Slide 11
+
+Looping the Loop Summary
+To keep the roller-coaster car moving on a circular path, a net force of
+must be applied.
+At the top of the loop, gravity and the normal force both act downward to provide the required force:
+At high speeds,
+gravity cannot provide this force by itself. A downward normal force is also required.
+At low speeds, where
+gravity provides too much force. An upward normal force would be required to keep the car from leaving the track!
+When
+gravity can provide the required force by itself. This occurs at the speed:
+
+## Slide 12
+
+Friction
+(1 of 2)
+Friction
+is a force that opposes the relative motion of two contacting surfaces.
+Static friction
+occurs when the contacting surfaces are not in relative motion. When you gently push on a box at rest on the floor, it is the force of static friction the keeps the box at rest. As you push harder, you eventually overcome the static friction and the box begins to move.
+Kinetic friction
+occurs once static friction has been overcome and the contacting surfaces are in relative motion.
+Walking would be impossible with friction!
+
+## Slide 13
+
+Friction
+(2 of 2)
+Static friction
+can increase as needed to prevent the relative motion between contacting surfaces—until it reaches a maximum value given by
+where
+n
+is the normal force and
+μ
+s
+is the
+coefficient of static friction
+between the two surfaces.
+Kinetic friction
+occurs between surfaces that are in relative motion; its magnitude is
+f
+k
+=
+μ
+k
+n
+.
+
+## Slide 14
+
+Solving Problems with Friction
+(1 of 2)
+Problems with friction are solved like all other Newton
+’
+s law problems.
+Identify the forces, draw a free-body diagram, and write Newton
+’
+s second law.
+You
+need to relate the force components in two perpendicular directions, corresponding to the normal force and the frictional force.
+Example: Stopping a
+car:
+A car locks its wheels and skids to rest. The coefficient of kinetic friction between the tires and pavement is
+μ
+.
+What is the acceleration of the skidding car?
+
+## Slide 15
+
+Solving Problems with Friction
+(2 of 2)
+Draw a free-body diagram for the skidding car.
+Apply Newton’s second law:
+Write this in component form:
+Solve these for
+n
+and
+a
+:
+y
+equation gives
+n
+=
+mg
+,
+so
+x
+equation gives
+
+## Slide 16
+
+Summary
+Newton
+’
+s laws are a universal description of
+motion, in which uniform motion occurs in the absence of a net force.
+All Newton
+’
+s law problems are handled using the same steps:
+Identify all the forces acting on the object or objects of interest.
+Draw one or more free-body diagrams.
+Write Newton
+’
+s law in vector form for each object:
+Equate the net force to the mass times the acceleration.
+Establish a coordinate system.
+Write Newton
+’
+s law in component form.
+Solve for the quantities of interest.
+
+## Slide 17
+
+Copyright
+This work is protected by United States copyright laws and is
+provided solely for the use of instructors in teaching their courses and assessing student learning. Dissemination or sale of any part of this work (including on the World Wide Web) will destroy the integrity of the work and is not permitted. The work and materials from it should never be made available to students except by instructors using the accompanying text in their classes. All recipients of this work are expected to abide by these restrictions and to honor the intended pedagogical purposes and the needs of other instructors who rely on these materials.

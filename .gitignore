@@ -1,0 +1,6 @@
+.venv/
+.venv-msys-failed/
+__pycache__/
+*.py[cod]
+.env
+tmp/

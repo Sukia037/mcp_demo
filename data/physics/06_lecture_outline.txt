@@ -1,0 +1,319 @@
+# 06_lecture_outline
+
+Source: 06_lecture_outline.pptx
+
+## Slide 1
+
+Essential University Physics
+Fourth Edition, Global Edition
+Chapter 6
+Energy, Work, and Power
+Copyright © 2021 Pearson Education, Ltd. All Rights Reserved
+
+## Slide 2
+
+Learning Outcomes
+6.1
+Explain the terms
+energy
+and
+work
+in the context of physics.
+6.2
+Find the work done by a force that doesn’t vary with position.
+6.3
+Calculate the dot product of two vectors.
+6.4
+Find the work done by a force that varies with position.
+6.5
+Define
+kinetic energy
+and find its value given an object’s mass and speed.
+6.6
+State the work–kinetic energy theorem.
+6.7
+Distinguish energy from power.
+
+## Slide 3
+
+Energy
+Although we talk about energy being consumed or generated, energy is actually conserved.
+This means that energy can flow into or out of a system, or it can change from one form to another, but it cannot be created or destroyed.
+Energy associated with
+macroscopic
+objects, such as cars or baseballs, is known as
+mechanical energy
+. Mechanical energy comes in two forms:
+Kinetic energy (energy of motion).
+Potential energy (energy of position or configuration), which can take different forms (e.g., gravitational or electrical).
+Work
+and
+heat
+are two ways to transfer energy to an object (more about those later).
+
+## Slide 4
+
+Energy and Systems
+It is often convenient to divide the universe into a
+system
+of interest and everything else, which is the environment of the system.
+In addition to mechanical energy, a system can have
+internal energy
+(energy of random molecular motion or configuration).
+Energy within the system can change from one form to another but the total energy in the system doesn’t change in the absence of energy transfer to or from the surroundings.
+
+## Slide 5
+
+Work
+(1 of 2)
+Energy can be transferred to a system when an external force does work on the system.
+For an object moving in one dimension, the work
+W
+done
+on the object by constant
+applied force
+is as given
+below:
+where
+F
+x
+is the component of the force in the direction of
+the object
+’
+s motion and
+is the object
+’
+s displacement
+.
+The S
+I unit for work is joule (J): 1 J = 1 newton-meter
+
+## Slide 6
+
+Work
+(2 of 2)
+Only the component of force in the direction of the displacement contributes to work. Special cases:
+A force applied to a stationary rigid object does no work on the object.
+A force applied perpendicular to the displacement of an object does no work on the object.
+
+## Slide 7
+
+Work Can Be Positive or Negative
+Work is positive if the force has a component in the same direction as the motion.
+Work is negative if the force has a component opposite the direction of motion.
+Work is zero if the force is perpendicular to the motion.
+
+## Slide 8
+
+Work and the Scalar Product
+Work is conveniently characterized using the
+scalar product
+, a way of combining two vectors to produce a scalar that depends on the vectors
+’
+magnitudes and the angle between them.
+The scalar product of two vectors
+is defined as given below:
+where
+A
+and
+B
+are the magnitudes of the vectors and
+θ
+is the angle between them:
+With vectors in
+component form, the scalar
+product
+can be
+written as given below:
+Work done by a constant force is the scalar product of force with displacement:
+
+## Slide 9
+
+Forces That Vary
+When a force varies with position, it
+’
+s necessary to integrate to calculate the work done.
+Geometrically, the work is the area under the force-versus-position curve.
+
+## Slide 10
+
+Integrating
+The
+definite integral
+is the result of the limiting process in which the area is divided into ever smaller regions.
+Work as the integral of the force
+F
+over position
+x
+is written as given below:
+Integration is the opposite of differentiation, so integrals of simple functions are readily evaluated. For powers of
+x
+, the integral becomes:
+
+## Slide 11
+
+Stretching a Spring
+A spring exerts a force
+The agent stretching a spring exerts a force
+and the work the agent does is as follows:
+In this case, the work is the area under the triangular force-versus-distance curve:
+
+## Slide 12
+
+Force and Work in Multiple Dimensions
+(1 of 2)
+In the general case, an object moves on an arbitrary path subject to a force whose magnitude and whose direction relative to the path may vary with position.
+In that case, we calculate the work contribution due to an
+arbitrary infinitesimal displacement as
+
+## Slide 13
+
+Force and Work in Multiple Dimensions
+(2 of 2)
+Thus, the total work is calculated as a
+line integral
+, which is the limit of the sum of scalar products of infinitesimally
+small displacements with the force at each point:
+Line integrals must be evaluated over a
+specific path
+that connects the limits of integration.
+
+## Slide 14
+
+Work Done against Gravity
+The work done by an agent lifting an object of mass
+m
+against gravity depends only on the vertical distance
+h
+:
+W = m
+g
+h
+The work is positive if the object is raised and negative if it
+’
+s lowered.
+The work is independent of the particular path taken to achieve a given vertical displacement.
+
+## Slide 15
+
+Work and Net Work
+The work
+you
+do in moving an object involves only the force
+you
+apply:
+But there may be other forces acting on the object as well.
+The
+net work
+is the work done by all the forces
+acting—that is, the work done by the net force.
+Example:
+Lift an object at constant speed and you do work
+m
+g
+h
+.
+But gravity, acting downward, does work
+−
+m
+g
+h
+.
+So the net work in this case is zero.
+
+## Slide 16
+
+Kinetic Energy
+Kinetic energy is a form of energy associated with motion.
+The
+kinetic energy
+K
+of an object of mass
+m
+moving at speed
+v
+is given below:
+The
+work–kinetic energy theorem
+states that the change in an object
+’
+s kinetic energy is equal to the net work done on the object:
+
+## Slide 17
+
+The Work–Kinetic Energy Theorem Proof
+Applying Newton
+’
+s second law to the net work done on an object results in the
+work–kinetic energy theorem:
+Evaluating the last integral between initial and final velocities
+v
+1
+and
+v
+2
+gives:
+So the kinetic energy,
+changes only when the net work
+done on an object is not zero and the change in this quantity is equal to the net work.
+
+## Slide 18
+
+Work and Kinetic Energy Example: Passing Zone
+A 1400-k
+g car accelerates from 70 to 95 k
+m/h. (a)  How much work is done on the car? (b) If the car then brakes to a stop, how much work is done on it?
+(a) Convert the speeds: 70 k
+m/h = 19.4 m/s and 95 k
+m/h = 26.4 m/s.
+(b) In this case, we have:
+
+## Slide 19
+
+Power
+Power
+is the
+rate
+at which work is done or the rate at which
+energy is used or produced. If work
+is done in time
+then the
+average power
+over this time is mentioned below:
+When the rate changes continuously, the
+instantaneous power
+is as follows:
+Power is measured in
+watts
+(W), with 1 W = 1 J/s.
+Total work or energy follows from power by multiplying (for constant power) or integrating (for varying power):
+
+## Slide 20
+
+Power and Velocity
+When a force acts over an infinitesimal displacement it does work:
+Thus, if this displacement occurs in a time
+dt
+, the power delivered by the force is as follows:
+
+## Slide 21
+
+Summary
+Work
+involves force applied over distance:
+Constant force, one dimension:
+Varying force, one dimension:
+In general:
+The
+work–kinetic energy theorem
+relates the net work done on an object to the change in its
+kinetic energy
+,
+Power
+is the rate at which work is done or the rate at which energy is produced or used:
+
+## Slide 22
+
+Copyright
+This work is protected by United States copyright laws and is
+provided solely for the use of instructors in teaching their courses and assessing student learning. Dissemination or sale of any part of this work (including on the World Wide Web) will destroy the integrity of the work and is not permitted. The work and materials from it should never be made available to students except by instructors using the accompanying text in their classes. All recipients of this work are expected to abide by these restrictions and to honor the intended pedagogical purposes and the needs of other instructors who rely on these materials.

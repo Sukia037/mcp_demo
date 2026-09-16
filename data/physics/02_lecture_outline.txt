@@ -1,0 +1,255 @@
+# 02_lecture_outline
+
+Source: 02_lecture_outline.pptx
+
+## Slide 1
+
+Essential University Physics
+Fourth Edition, Global Edition
+Chapter 2
+Motion in a Straight Line
+Copyright © 2021 Pearson Education, Ltd. All Rights Reserved
+
+## Slide 2
+
+Learning
+Outcomes
+2.1
+Define fundamental motion concepts: position, velocity, and acceleration.
+2.2
+Distinguish instantaneous from average velocity and acceleration.
+2.3
+Determine velocity and position when acceleration is constant.
+2.4
+Describe how gravity near Earth’s surface provides an example of constant acceleration.
+2.5
+Use calculus to deal with nonconstant acceleration.
+
+## Slide 3
+
+Average Motion: Coordinate Systems
+In one dimension, position can be described by a positive or negative number on a number line, which is called a
+coordinate system
+:
+The
+origin
+of the coordinate system can be placed at any convenient location.
+In the figure, the positive direction is shown north of the origin—but we could have made south the positive direction, if desired.
+
+## Slide 4
+
+Position and Displacement
+Position
+gives our current location in relation to the origin.
+Displacement
+gives our change in position: For motion along the
+x
+direction, displacement is designated
+where
+x
+1
+and
+x
+2
+are the initial and final positions, respectively.
+Example:
+As we move from International Falls to Des Moines, our displacement is
+negative
+even though our position
+is always
+positive
+
+## Slide 5
+
+Average Motion: Speed and Velocity
+Average speed
+is distance divided by time.
+Average velocity
+over a time interval
+is defined as the
+displacement divided by the time:
+For a round-trip, the average velocity is zero even though the average speed is not zero!
+COMP: Change end period to comma after the equation and before “ and your average.”
+
+## Slide 6
+
+Instantaneous Velocity
+(1 of 2)
+Instantaneous velocity
+is the limit of the average velocity as the time interval becomes arbitrarily short:
+This limiting procedure defines the
+derivative
+:
+Velocity is the slope of the position-versus-time curve.
+Instantaneous speed
+is the magnitude of the instantaneous velocity.
+
+## Slide 7
+
+Instantaneous Velocity
+(2 of 2)
+Consider the four position–time graphs. Which graph represents an object:
+moving with a constant speed?
+reversing its direction of motion?
+starting slowly and speeding up?
+
+## Slide 8
+
+Using Calculus to Find Derivatives
+In calculus, the derivative gives the result of the limiting procedure:
+Derivatives of powers are straightforward:
+Other common derivatives include the trig functions:
+
+## Slide 9
+
+Acceleration
+(1 of 2)
+Acceleration
+is the rate of change of velocity:
+Average acceleration
+over a time interval
+is defined as the change in velocity divided by the change in time:
+Instantaneous acceleration
+is the limit of the average acceleration as the time interval becomes arbitrarily short:
+
+## Slide 10
+
+Acceleration
+(2 of 2)
+Average acceleration
+is the slope of the line that connects two points (secant line) on the velocity-versus-time curve corresponding to a particular interval:
+Instantaneous acceleration
+is the slope of the velocity-versus-time curve (tangent line) at a given point:
+
+## Slide 11
+
+Position, Velocity, and Acceleration
+We cannot determine the
+velocity
+of an object knowing only its position at a moment in time—
+we must know how fast its position changes around that moment:
+Similarly, we cannot determine the
+acceleration
+of an object knowing only its velocity at a moment in time—
+we must know how fast its velocity changes around that moment:
+
+## Slide 12
+
+Position, Velocity, and Acceleration Graphs
+The first graph shows the height (position) of a ball tossed upward from the ground.
+The velocity is determined from the slope of the position graph. Note that the instantaneous velocity is zero at point P.
+The acceleration is determined from the slope of the velocity graph, which is constant.
+At the peak of its trajectory, the ball is instantaneously at rest but it’s still accelerating.
+
+## Slide 13
+
+Constant Acceleration
+(1 of 2)
+When acceleration is constant, position, velocity, acceleration, and time are related by:
+where
+x
+0
+and
+v
+0
+are initial values at time
+t
+= 0, and
+x
+and
+v
+are the values at an arbitrary time
+t
+.
+
+## Slide 14
+
+Constant Acceleration
+(2 of 2)
+With constant acceleration:
+velocity is a linear function of time.
+position is a quadratic function of time.
+
+## Slide 15
+
+The Acceleration of Gravity
+At a given point, objects in free fall have the same acceleration, regardless of mass.
+Near Earth
+’
+s surface, this acceleration has a nearly constant magnitude:
+Therefore, the equations for constant acceleration apply:
+In a coordinate system with the
+y
+axis upward, they read:
+Strobe photo of a falling ball shows increasing spacing resulting from the acceleration of gravity.
+
+## Slide 16
+
+Example: The Acceleration of Gravity
+You toss a ball straight up at 7.3 m/s; it leaves your hand at 1.5 m above the floor. Find its maximum height and when it hits the floor.
+
+## Slide 17
+
+Example: Solution
+(1 of 2)
+At its maximum height, the ball is instantaneously at rest (even though it
+’
+s still
+accelerating
+). Solving the fourth equation of motion with
+v
+= 0 gives the maximum height:
+
+## Slide 18
+
+Example: Solution
+(2 of 2)
+Setting
+y
+= 0 in the third equation of motion gives a quadratic in time; the result is the two values for the time when the ball is on the floor:
+t
+=
+−
+0.18 s and
+t
+= 1.7 s.
+The first answer tells when the ball
+would have been
+on the floor if it had always been on this trajectory; the second is the answer we want.
+
+## Slide 19
+
+When the Acceleration Isn’t Constant
+When the acceleration is not constant, things are more difficult.
+However, if the acceleration is a known function of time,
+a
+(
+t
+), we may solve for
+v
+(
+t
+) and
+x
+(
+t
+) by integration:
+Which object experiences a constant acceleration?
+Which object has the greatest change in its velocity?
+
+## Slide 20
+
+Summary
+Position, velocity, and acceleration are the quantities that characterize motion:
+Velocity is the rate of change of position.
+Acceleration is the rate of change of velocity.
+When acceleration is constant, simple equations relate position, velocity, acceleration, and time.
+An important case is the acceleration due to gravity near Earth
+’
+s surface, where we set
+
+## Slide 21
+
+Copyright
+This work is protected by United States copyright laws and is
+provided solely for the use of instructors in teaching their courses and assessing student learning. Dissemination or sale of any part of this work (including on the World Wide Web) will destroy the integrity of the work and is not permitted. The work and materials from it should never be made available to students except by instructors using the accompanying text in their classes. All recipients of this work are expected to abide by these restrictions and to honor the intended pedagogical purposes and the needs of other instructors who rely on these materials.
