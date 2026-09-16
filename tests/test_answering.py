@@ -193,23 +193,38 @@ class AnsweringTests(unittest.TestCase):
         )
         self.assertEqual(captured["history"], history)
 
-    def test_unrelated_question_does_not_invent_an_answer(self) -> None:
-        called = False
+    def test_out_of_domain_questions_do_not_call_the_llm_or_return_sources(self) -> None:
+        questions = [
+            "想睡覺了怎麼辦？",
+            "今天晚餐吃什麼？",
+            "Python quicksort 怎麼寫？",
+            "台積電股價是多少？",
+            "巧克力蛋糕怎麼做？",
+        ]
+        history = [
+            {"role": "user", "content": "資訊工程學系畢業需要多少學分？"},
+            {"role": "assistant", "content": "畢業至少需要128學分。"},
+        ]
 
-        def generator_should_not_run(question, matches, model, history):
-            nonlocal called
-            called = True
-            return "This should not be returned."
+        for question in questions:
+            called = False
 
-        response = answer_question(
-            "How do I bake a chocolate cake?",
-            llm_generator=generator_should_not_run,
-        )
+            def generator_should_not_run(question, matches, model, history):
+                nonlocal called
+                called = True
+                return "This should not be returned."
 
-        self.assertEqual(response["answer"], NO_ANSWER_MESSAGE)
-        self.assertEqual(response["sources"], [])
-        self.assertEqual(response["generation"]["mode"], "not_used")
-        self.assertFalse(called)
+            with self.subTest(question=question):
+                response = answer_question(
+                    question,
+                    history=history,
+                    llm_generator=generator_should_not_run,
+                )
+
+                self.assertEqual(response["answer"], NO_ANSWER_MESSAGE)
+                self.assertEqual(response["sources"], [])
+                self.assertEqual(response["generation"]["mode"], "not_used")
+                self.assertFalse(called)
 
 
 if __name__ == "__main__":

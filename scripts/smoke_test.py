@@ -10,7 +10,11 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CLIENT = PROJECT_ROOT / "src" / "mcp_client.py"
 
 
-def run_case(name: str, arguments: list[str], expected_text: str) -> None:
+def run_case(
+    name: str,
+    arguments: list[str],
+    expected_text: str | list[str],
+) -> None:
     result = subprocess.run(
         [sys.executable, str(CLIENT), *arguments],
         cwd=PROJECT_ROOT,
@@ -21,7 +25,12 @@ def run_case(name: str, arguments: list[str], expected_text: str) -> None:
         check=False,
     )
     output = f"{result.stdout}\n{result.stderr}"
-    if result.returncode != 0 or expected_text not in output:
+    expected_values = (
+        [expected_text] if isinstance(expected_text, str) else expected_text
+    )
+    if result.returncode != 0 or any(
+        expected not in output for expected in expected_values
+    ):
         raise RuntimeError(
             f"{name} failed (exit {result.returncode}).\n{output.strip()}"
         )
@@ -70,6 +79,16 @@ def main() -> int:
             "end-to-end answer",
             ["資訊工程學系畢業需要多少學分？"],
             answer_expectation,
+        )
+        run_case(
+            "out-of-domain rejection",
+            ["想睡覺了怎麼辦？"],
+            [
+                "目前的本地知識庫中沒有足夠的相關資訊",
+                "LLM not used",
+                "--- SOURCES",
+                "None",
+            ],
         )
     except (RuntimeError, subprocess.TimeoutExpired) as error:
         print(f"SMOKE TEST FAILED: {error}", file=sys.stderr)

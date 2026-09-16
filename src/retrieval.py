@@ -86,6 +86,13 @@ DOCUMENT_FREQUENCIES = Counter(
     for token in chunk.term_counts
 )
 
+# Calibrated with the checked-in YZU evaluation cases. The weakest in-domain
+# top result is 2.4698 / 0.429 coverage; the strongest out-of-domain candidate
+# is 0.4770 / 0.125. These rounded values leave margin between both groups and
+# still accept a grounded conversational follow-up at 2.2573 / 0.316.
+MIN_RELEVANCE_SCORE = 1.5
+MIN_QUERY_TERM_COVERAGE = 0.30
+
 
 def _score(query_terms: Counter[str], chunk: IndexedChunk) -> float:
     matched_terms = query_terms.keys() & chunk.term_counts.keys()
@@ -104,6 +111,15 @@ def _score(query_terms: Counter[str], chunk: IndexedChunk) -> float:
     return weighted_matches / length_normalizer + (2.0 * coverage)
 
 
+def _query_term_coverage(
+    query_terms: Counter[str],
+    chunk: IndexedChunk,
+) -> float:
+    if not query_terms:
+        return 0.0
+    return len(query_terms.keys() & chunk.term_counts.keys()) / len(query_terms)
+
+
 def search_documents(question: str, limit: int = 3) -> dict[str, object]:
     question = question.strip()
     query_terms = Counter(tokenize(question))
@@ -112,28 +128,52 @@ def search_documents(question: str, limit: int = 3) -> dict[str, object]:
             "query": question,
             "matches": [],
             "message": "Please enter a question with searchable words.",
+            "relevance": {
+                "accepted": False,
+                "top_score": 0.0,
+                "query_term_coverage": 0.0,
+                "matched_terms": [],
+            },
         }
 
     ranked = sorted(
         (
-            (_score(query_terms, chunk), chunk)
+            (
+                _score(query_terms, chunk),
+                _query_term_coverage(query_terms, chunk),
+                chunk,
+            )
             for chunk in INDEXED_CHUNKS
         ),
-        key=lambda item: (-item[0], item[1].source, item[1].chunk_number),
+        key=lambda item: (-item[0], item[2].source, item[2].chunk_number),
     )
-    matches = [
-        {
-            "source": chunk.source,
-            "chunk": chunk.chunk_number,
-            "score": round(score, 4),
-            "content": chunk.text,
-        }
-        for score, chunk in ranked[: max(limit, 0)]
-        if score > 0
-    ]
+    top_score, top_coverage, top_chunk = ranked[0]
+    matched_terms = sorted(query_terms.keys() & top_chunk.term_counts.keys())
+    accepted = (
+        top_score >= MIN_RELEVANCE_SCORE
+        and top_coverage >= MIN_QUERY_TERM_COVERAGE
+    )
+    matches = []
+    if accepted:
+        matches = [
+            {
+                "source": chunk.source,
+                "chunk": chunk.chunk_number,
+                "score": round(score, 4),
+                "content": chunk.text,
+            }
+            for score, _coverage, chunk in ranked[: max(limit, 0)]
+            if score > 0
+        ]
 
     return {
         "query": question,
         "matches": matches,
         "message": None if matches else "No sufficiently relevant content was found.",
+        "relevance": {
+            "accepted": accepted,
+            "top_score": round(top_score, 4),
+            "query_term_coverage": round(top_coverage, 4),
+            "matched_terms": matched_terms,
+        },
     }
