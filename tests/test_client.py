@@ -13,6 +13,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
 from mcp_client import (  # noqa: E402
+    append_conversation_turn,
     get_server_environment,
     print_banner,
     print_section,
@@ -21,6 +22,19 @@ from mcp_client import (  # noqa: E402
 
 
 class ClientUiTests(unittest.TestCase):
+    def test_conversation_keeps_only_the_six_most_recent_turns(self) -> None:
+        history = []
+        for number in range(7):
+            append_conversation_turn(
+                history,
+                f"question {number}",
+                f"answer {number}",
+            )
+
+        self.assertEqual(len(history), 12)
+        self.assertEqual(history[0]["content"], "question 1")
+        self.assertEqual(history[-1]["content"], "answer 6")
+
     def test_banner_and_section_are_readable_plain_text(self) -> None:
         output = io.StringIO()
         with patch.dict(os.environ, {"KNOWLEDGE_BASE": "yzu"}):

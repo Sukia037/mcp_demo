@@ -15,6 +15,8 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_KNOWLEDGE_BASE = "yzu"
 EXPECTED_RESPONSE = "MCP connection OK"
 UI_WIDTH = 64
+MAX_CONVERSATION_MESSAGES = 12
+MAX_HISTORY_MESSAGE_CHARACTERS = 800
 
 
 def configure_terminal_encoding() -> None:
@@ -46,6 +48,27 @@ def short_error_message(error: BaseException) -> str:
 
     message = str(current).strip() or type(current).__name__
     return message if len(message) <= 240 else f"{message[:237]}..."
+
+
+def append_conversation_turn(
+    history: list[dict[str, str]],
+    question: str,
+    answer: str,
+) -> None:
+    """Keep the six most recent user/assistant turns in the CLI session."""
+    history.extend(
+        [
+            {
+                "role": "user",
+                "content": question.strip()[:MAX_HISTORY_MESSAGE_CHARACTERS],
+            },
+            {
+                "role": "assistant",
+                "content": answer.strip()[:MAX_HISTORY_MESSAGE_CHARACTERS],
+            },
+        ]
+    )
+    del history[:-MAX_CONVERSATION_MESSAGES]
 
 
 def get_server_environment() -> dict[str, str]:
@@ -136,8 +159,15 @@ async def show_search_results(client: Client, question: str) -> None:
         print(preview)
 
 
-async def show_answer(client: Client, question: str) -> None:
-    result = await client.call_tool("answer_question", {"question": question})
+async def show_answer(
+    client: Client,
+    question: str,
+    history: list[dict[str, str]] | None = None,
+) -> dict[str, object]:
+    result = await client.call_tool(
+        "answer_question",
+        {"question": question, "history": history or []},
+    )
     if result.is_error or not isinstance(result.structured_content, dict):
         raise RuntimeError("answer_question returned an invalid MCP result")
 
@@ -160,13 +190,63 @@ async def show_answer(client: Client, question: str) -> None:
     print_section("SOURCES")
     if not sources:
         print("None")
-        return
+        return response
 
     for source in sources:
         print(
             f"- {source['name']} "
             f"(chunk {source['chunk']}, score {source['score']})"
         )
+    return response
+
+
+def show_conversation_history(history: list[dict[str, str]]) -> None:
+    print_section("CONVERSATION HISTORY")
+    if not history:
+        print("No conversation history in this session.")
+        return
+
+    turn = 0
+    for message in history:
+        if message["role"] == "user":
+            turn += 1
+            print(f"\n{turn}. You: {message['content']}")
+        else:
+            print(f"   Assistant: {message['content']}")
+
+
+async def run_conversation(client: Client) -> None:
+    history: list[dict[str, str]] = []
+    print("Status: conversation ready")
+    print("Commands: /history, /clear, /help, /exit")
+
+    while True:
+        try:
+            question = input("\nYou: ").strip()
+        except (KeyboardInterrupt, EOFError):
+            print("\nGoodbye.")
+            return
+
+        command = question.lower()
+        if command in {"/exit", "/quit"}:
+            print("Goodbye.")
+            return
+        if command == "/history":
+            show_conversation_history(history)
+            continue
+        if command == "/clear":
+            history.clear()
+            print("Conversation history cleared.")
+            continue
+        if command == "/help":
+            print("/history show recent turns | /clear forget them | /exit leave")
+            continue
+        if not question:
+            print("Please enter a non-empty question.")
+            continue
+
+        response = await show_answer(client, question, history)
+        append_conversation_turn(history, question, str(response["answer"]))
 
 
 async def check_connection(
@@ -219,7 +299,7 @@ async def check_connection(
             elif answer_question is not None:
                 await show_answer(client, answer_question)
             else:
-                raise RuntimeError("no client action was selected")
+                await run_conversation(client)
     except Exception as error:
         print(
             f"MCP connection failed: {short_error_message(error)}",
@@ -237,9 +317,7 @@ def main() -> int:
         args = parse_args()
         question = args.question
         if not (args.health or args.knowledge_status or args.search is not None):
-            if question is None:
-                question = input("Question: ")
-            if not question.strip():
+            if question is not None and not question.strip():
                 print("Please enter a non-empty question.", file=sys.stderr)
                 return 1
 

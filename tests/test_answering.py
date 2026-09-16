@@ -38,10 +38,11 @@ class AnsweringTests(unittest.TestCase):
     def test_llm_receives_all_retrieved_context_and_returns_grounded_answer(self) -> None:
         captured = {}
 
-        def fake_generator(question, matches, model):
+        def fake_generator(question, matches, model, history):
             captured["question"] = question
             captured["matches"] = matches
             captured["model"] = model
+            captured["history"] = history
             return "畢業至少須修滿128學分 [元智大學資訊工程學系必修科目表.txt]。"
 
         response = answer_question(
@@ -51,6 +52,7 @@ class AnsweringTests(unittest.TestCase):
 
         self.assertEqual(response["generation"]["mode"], "llm")
         self.assertEqual(len(captured["matches"]), 3)
+        self.assertEqual(captured["history"], [])
         self.assertIn("元智大學資訊工程學系必修科目表.txt", response["answer"])
         self.assertEqual(response["warning"], None)
 
@@ -66,12 +68,17 @@ class AnsweringTests(unittest.TestCase):
         fake_responses = FakeResponses()
         fake_client = SimpleNamespace(responses=fake_responses)
         matches = search_documents("程式能力檢定要答對幾題？")["matches"]
+        history = [
+            {"role": "user", "content": "畢業規定有哪些？"},
+            {"role": "assistant", "content": "可以查必修科目表。"},
+        ]
 
         with patch.dict(os.environ, {"OPENAI_BASE_URL": ""}):
             answer = generate_grounded_answer(
                 "程式能力檢定要答對幾題？",
                 matches,
                 "test-model",
+                history=history,
                 client=fake_client,
             )
 
@@ -79,6 +86,7 @@ class AnsweringTests(unittest.TestCase):
         self.assertEqual(fake_responses.arguments["model"], "test-model")
         self.assertFalse(fake_responses.arguments["store"])
         self.assertIn("程式能力檢定要答對幾題？", fake_responses.arguments["input"])
+        self.assertIn("畢業規定有哪些？", fake_responses.arguments["input"])
         self.assertIn(matches[0]["content"], fake_responses.arguments["input"])
         self.assertIn("only the supplied", fake_responses.arguments["instructions"])
 
@@ -147,7 +155,7 @@ class AnsweringTests(unittest.TestCase):
         self.assertEqual(fake_completions.calls, 2)
 
     def test_llm_error_falls_back_without_losing_sources(self) -> None:
-        def failing_generator(question, matches, model):
+        def failing_generator(question, matches, model, history):
             raise RuntimeError("simulated API failure")
 
         response = answer_question(
@@ -159,10 +167,36 @@ class AnsweringTests(unittest.TestCase):
         self.assertTrue(response["sources"])
         self.assertIn("LLM generation is unavailable", response["warning"])
 
+    def test_follow_up_question_uses_recent_conversation_context(self) -> None:
+        captured = {}
+        history = [
+            {"role": "user", "content": "專業實習有哪些修習方式？"},
+            {"role": "assistant", "content": "包含校外實習等方式。"},
+        ]
+
+        def fake_generator(question, matches, model, received_history):
+            captured["question"] = question
+            captured["matches"] = matches
+            captured["history"] = received_history
+            return "校外實習共12學分 [元智大學資訊工程學系專業實習實施辦法.txt]。"
+
+        response = answer_question(
+            "那總共要修幾學分？",
+            history=history,
+            llm_generator=fake_generator,
+        )
+
+        self.assertEqual(response["generation"]["mode"], "llm")
+        self.assertEqual(
+            captured["matches"][0]["source"],
+            "元智大學資訊工程學系專業實習實施辦法.txt",
+        )
+        self.assertEqual(captured["history"], history)
+
     def test_unrelated_question_does_not_invent_an_answer(self) -> None:
         called = False
 
-        def generator_should_not_run(question, matches, model):
+        def generator_should_not_run(question, matches, model, history):
             nonlocal called
             called = True
             return "This should not be returned."

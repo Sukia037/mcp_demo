@@ -29,9 +29,12 @@ def search_documents(question: str, limit: int = 3) -> dict[str, object]:
 
 
 @mcp.tool()
-def answer_question(question: str) -> dict[str, object]:
-    """Answer a question from retrieved local context and include its sources."""
-    return build_answer(question)
+def answer_question(
+    question: str,
+    history: list[dict[str, str]] | None = None,
+) -> dict[str, object]:
+    """Answer with local context while considering recent conversation history."""
+    return build_answer(question, history=history)
 
 
 if __name__ == "__main__":

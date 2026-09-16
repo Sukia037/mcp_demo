@@ -77,6 +77,24 @@ $env:KNOWLEDGE_BASE="yzu"
 .\.venv\Scripts\python.exe src\mcp_client.py
 ```
 
+互動模式會在同一個 MCP session 中持續接受問題，並保留最近6輪使用者與助理訊息，讓使用者可以接著追問。可用指令：
+
+```text
+/history  顯示目前對話歷史
+/clear    清除對話歷史並開始新主題
+/help     顯示可用指令
+/exit     結束對話並關閉 MCP Server
+```
+
+例如：
+
+```text
+You: 專業實習有哪些修習方式？
+You: 那校外實習總共要幾學分？
+```
+
+第二題會同時帶入上一輪對話，協助 Retrieval 理解「那」指的是專業實習。對話歷史只保留在目前 CLI 執行期間，不會寫入磁碟。
+
 或直接帶入問題：
 
 ```powershell
@@ -121,9 +139,10 @@ SMOKE TEST PASSED
 ## 面試時可說明的設計
 
 - MCP Client 負責啟動 Server、呼叫 MCP tool（MCP 工具）並顯示結果。
+- Client 在同一個 MCP session 管理最近6輪對話，提供歷史查看、清除與結束指令。
 - MCP Server 暴露連線檢查、文件狀態、檢索與問答四個 tools。
 - Local Retrieval（本地檢索）使用可解釋的關鍵字權重，不需要外部資料庫。
-- LLM 只收到 Retrieval 找出的 top 3 片段，prompt 要求資料不足時明確拒答。
+- Server 使用最近一輪使用者問題協助解析追問；LLM 收到有限的對話歷史與 Retrieval 找出的 top 3 片段，prompt 要求所有事實仍須由文件支持。
 - 回答永遠同時保留檢索來源；找不到相關內容時不呼叫 LLM，也不產生答案。
 
 ## 診斷命令
